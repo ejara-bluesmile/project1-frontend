@@ -1,0 +1,9 @@
+.login {
+  background: url(./components/login/backgroun.jpg) no-repeat center center
+    fixed;
+  width: 100%;
+  height: min-content;
+  height: 650px;
+
+  background-size: cover;
+}

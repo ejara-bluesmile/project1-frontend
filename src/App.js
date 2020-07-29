@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import Login from "./components/login/Login";
 import Register from "./components/login/Register";
 import BackLogin from "./components/login/backgroun.jpg";
@@ -18,6 +19,12 @@ function App() {
       </div>
     </Router>
   );
+=======
+import IssuesForm from "./components/issues/issuesForm";
+
+function App() {
+  return <React.Fragment><IssuesForm></IssuesForm></React.Fragment>
+>>>>>>> 5c1e5de... first commit issues
 }
 
 export default App;

@@ -11,7 +11,7 @@ function Login() {
         <div className="col-sm-12 main-section">
           <div className="modal-content">
             <div className="col-12 user-img">
-              <img src={UserIcon} alt="iconuser" />
+              <img src={UserIcon} alt="iconlogin" />
             </div>
             <div className="col-12 form-input">
               <form>

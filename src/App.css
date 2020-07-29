@@ -1,0 +1,7 @@
+.login {
+  background: url(./components/login/backgroun.jpg);
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}

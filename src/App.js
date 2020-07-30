@@ -4,6 +4,7 @@ import Register from "./components/login/Register";
 import EditUser from "./components/login/EditUser";
 import BackLogin from "./components/login/backgroun.jpg";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./components/Fontawesomeicon/Index";
 import "./App.css";
 
 function App() {

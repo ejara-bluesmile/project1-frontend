@@ -1,11 +1,15 @@
 import React from "react";
 import ImgIcon from "../user.png";
 import "./Sidebar.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Siderbar() {
   return (
     <div>
+      <input type="checkbox" id="check" />
       <nav className="navbar">
+        <label for="check">
+          <FontAwesomeIcon icon="bars" id="sidebar-btn" />
+        </label>
         <div className="left-area">
           <h3>Bluesmile</h3>
         </div>
@@ -25,7 +29,6 @@ function Siderbar() {
         </center>
         <div className="sidebar-nav">
           <a href="">
-            <i className="fas fa-desktop"></i>
             <span>Edit User</span>
           </a>
           <a href="">

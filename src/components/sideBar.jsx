@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./common/common.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ImgIcon from "../resource/user.png";
@@ -18,17 +19,15 @@ function Sidebar() {
             <h4>Email</h4>
           </center>
           <div className="sidebar-nav">
-            <a href="">
-              <span>Edit User</span>
-            </a>
-            <a href="">
-              <i className="fas fa-desktop"></i>
+            <Link to="/editusers">Edit User</Link>
+
+            <Link to="/useractions">
               <span>User Actions</span>
-            </a>
-            <a href="">
-              <i className="fas fa-desktop"></i>
+            </Link>
+
+            <Link to="/issuesactions">
               <span>Issues Actions </span>
-            </a>
+            </Link>
           </div>
         </label>
       </div>

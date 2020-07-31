@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from '../common/form';
-import Card from '../common/card';
+import "./issues.css"
 // import { getTodo, saveTodo } from '../services/todoService';
 
 class IssuesForm extends Form {
@@ -34,20 +34,21 @@ class IssuesForm extends Form {
     // }
     render() {
         return (
-            <div className="row">
-                <div className="col-3">
-                    <Card></Card>
-                </div>
-                <div className="col-8">
-                    <h1>Create Issue</h1>
-                    <form onSubmit={this.handleSubmit}>
-                        {this.renderInput("title", "Titulo")}
-                        {this.renderInput("project", "Project")}
-                        {this.renderInput("user", "User")}
-                        {this.renderInput("telefono", "Telefono")}
-                        {this.renderTextarea("description", "Description")}
-                        {this.renderButton("Create")}
-                    </form>
+            <div>
+                <div className="modal-dialog text-center">
+                    <div className="col-sm-12 main-section">
+                        <div className="modal-content">
+                            <h1>Create Issue</h1>
+                            <form onSubmit={this.handleSubmit}>
+                                {this.renderInput("title", "Titulo")}
+                                {this.renderInput("project", "Project")}
+                                {this.renderInput("user", "User")}
+                                {this.renderInput("telefono", "Telefono")}
+                                {this.renderTextarea("description", "Description")}
+                                {this.renderButton("Create")}
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

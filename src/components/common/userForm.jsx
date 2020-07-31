@@ -1,8 +1,8 @@
 import React from "react";
 import Joi from "joi-browser";
 import Form from "./form";
-import NavBar from "../Navbar";
-import SideBar from "./sideBar";
+import NavBar from "../navBar";
+import SideBar from "../sideBar";
 import "./common.css";
 
 class UserForm extends Form {

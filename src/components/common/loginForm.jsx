@@ -1,7 +1,7 @@
 import React from "react";
 import Joi from "joi-browser";
 import Form from "./form";
-import IconLogin from "../login/user-icon.png";
+import IconLogin from "../../resource/user-icon.png";
 import { Link } from "react-router-dom";
 import "./common.css";
 

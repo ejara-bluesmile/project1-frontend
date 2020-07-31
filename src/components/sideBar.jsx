@@ -1,7 +1,7 @@
 import React from "react";
-import "./common.css";
+import "./common/common.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ImgIcon from "../login/user.png";
+import ImgIcon from "../resource/user.png";
 
 function Sidebar() {
   return (

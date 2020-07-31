@@ -3,7 +3,7 @@ import Joi from "joi-browser";
 import Form from "./form";
 import { Link } from "react-router-dom";
 import "./common.css";
-import IconRegister from "../login/register-icon.png";
+import IconRegister from "../../resource/register-icon.png";
 
 class RegisterForm extends Form {
   state = {

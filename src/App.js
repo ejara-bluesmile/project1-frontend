@@ -1,6 +1,5 @@
 import React from "react";
 // import Login from "./components/login/Login";
-import Navbar from "./components/Navbar.jsx";
 import LoginForm from "./components/common/loginForm";
 // import Register from "./components/login/Register";
 import RegisterForm from "./components/common/registerForm";

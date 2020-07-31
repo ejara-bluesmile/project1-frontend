@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 //import { getSongs } from '../services/songService';
 //import { Link } from 'react-router-dom';
-import Siderbar from "../login/Sidebar/Sidebar";
 import IssuesTable from "./issuesTable";
+import Sidebar from "../sideBar";
 // import Like from './common/like'
 // import SearchBox from "./searchBox";
 
@@ -59,8 +59,8 @@ class Issues extends Component {
         console.log("aquiiiiiiiii", this.state.songs);
         return (
             <div className="row">
-                <div className="col-3"><Siderbar></Siderbar></div>
-                <div className="col-8">
+                <div className="col-2"><Sidebar/></div>
+                <div className="col-12 modal-dialog text-center">
                     <h1>Issues actions</h1>
                     {/* <p>Hay {totalCount} canciones en la base de datos</p>
            <SearchBox value={shis.state.searchQuery} onChange={this.handleSearch} />*/}

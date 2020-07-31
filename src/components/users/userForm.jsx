@@ -1,9 +1,9 @@
 import React from "react";
 import Joi from "joi-browser";
-import Form from "./form";
+import Form from "../common/form";
 import NavBar from "../navBar";
 import SideBar from "../sideBar";
-import "./common.css";
+import "../common/common.css";
 
 class UserForm extends Form {
   state = {

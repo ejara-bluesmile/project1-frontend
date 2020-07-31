@@ -1,9 +1,9 @@
 import React from "react";
 // import Login from "./components/login/Login";
-import LoginForm from "./components/common/loginForm";
+import LoginForm from "./components/loginForm";
 // import Register from "./components/login/Register";
-import RegisterForm from "./components/common/registerForm";
-import UserForm from "./components/common/userForm";
+import RegisterForm from "./components/registerForm";
+import UserForm from "./components/users/userForm";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./components/Fontawesomeicon/Index";
 import "./App.css";

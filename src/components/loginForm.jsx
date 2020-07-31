@@ -1,21 +1,19 @@
 import React from "react";
 import Joi from "joi-browser";
-import Form from "./form";
+import Form from "./common/form";
+import IconLogin from "../resource/user-icon.png";
 import { Link } from "react-router-dom";
-import "./common.css";
-import IconRegister from "../../resource/register-icon.png";
+import "./common/common.css";
 
-class RegisterForm extends Form {
+class LoginForm extends Form {
   state = {
-    data: { email: "", password: "", name: "", lastname: "" },
+    data: { username: "", password: "" },
     errors: {},
   };
 
   schema = {
-    email: Joi.string().required().email().label("Email"),
-    password: Joi.string().required().min(5).label("Password"),
-    name: Joi.string().required().label("Name"),
-    lastname: Joi.string().required().label("Lastname"),
+    username: Joi.string().required().label("Username"),
+    password: Joi.string().required().label("Password"),
   };
 
   doSubmit = () => {
@@ -30,16 +28,17 @@ class RegisterForm extends Form {
           <div className="col-sm-10 main-section">
             <div className="modal-content">
               <div className="col-12 user-img">
-                <img src={IconRegister} alt="iconregister" />
+                <img src={IconLogin} alt="iconlogin" />
               </div>
               <div className="col-12 form-input">
                 <form onSubmit={this.handleSubmit}>
-                  {this.renderInput("name", "Name")}
-                  {this.renderInput("lastname", "Lastname")}
-                  {this.renderInput("email", "Email")}
+                  {this.renderInput("username", "Username")}
                   {this.renderInput("password", "Password", "password")}
-                  {this.renderButton("Register")}
+                  {this.renderButton("Login")}
                 </form>
+              </div>
+              <div className="col-12 forgot">
+                <Link to="/register">Create new user</Link>
               </div>
             </div>
           </div>
@@ -49,4 +48,4 @@ class RegisterForm extends Form {
   }
 }
 
-export default RegisterForm;
+export default LoginForm;

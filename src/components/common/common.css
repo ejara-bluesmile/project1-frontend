@@ -1,0 +1,162 @@
+/* NAVBAR */
+nav {
+  background: #434e5a;
+  border-style: hidden;
+  z-index: 1;
+}
+
+nav h3 {
+  color: blue;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-left: 15px;
+}
+
+/* SIDEBAR */
+
+.wrapper {
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar {
+  position: fixed;
+  padding-top: 150px;
+  width: 240px;
+  height: 100%;
+  background: #434e5a;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.wrapper .sidebar h4 {
+  color: aliceblue;
+}
+
+.sidebar .profile_image {
+  width: 80px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.wrapper .sidebar-nav a {
+  width: 240px;
+  padding: 15px;
+  border-bottom: 1px solid rgba((0), 0, 0, 0.05);
+  border-top: 1px solid rgba(225, 225, 225, 0.05);
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+  letter-spacing: 2px;
+  font-size: 16px;
+  transition: 0.5s;
+  transition-property: background;
+}
+.sidebar a:hover {
+  background: orangered;
+}
+
+label #sidebar-btn {
+  color: orangered;
+  position: fixed;
+  cursor: pointer;
+  top: 60px;
+  left: 20px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+  transition-property: color;
+}
+label #sidebar-btn:hover {
+  color: blue;
+}
+
+#check:checked ~ .sidebar {
+  left: -250px;
+  transition: 0.5s;
+}
+
+#check {
+  display: none;
+}
+
+/* MODAL */
+
+.main-section {
+  margin: 0 auto;
+  margin-top: 130px;
+  padding: 0;
+}
+
+.modal-content {
+  background-color: #434e5a;
+  opacity: 0.8;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+.user-img img {
+  height: 120px;
+  width: 120px;
+}
+
+.user-img {
+  margin-top: -60px;
+  margin-bottom: 45px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group input {
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding-left: 0px;
+  text-align: center;
+}
+
+.form-input button {
+  width: 100px;
+  margin: 20px 0 25px;
+  padding: 10px;
+}
+
+.btn-danger {
+  font-size: 19px;
+  border-radius: 5px;
+  padding: 7px 14px;
+  border: 1px solid seagreen;
+}
+
+.forgot {
+  padding: 5px 0 25px;
+}
+
+.forgot a {
+  color: blue;
+  font-size: 16px;
+}
+
+/* USERFORM */
+.modal-content-userform {
+  margin-top: -100px;
+}
+
+.modal-userform {
+  margin: 40px 40px;
+}
+
+.modal-userform button {
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.modal-content-userform input {
+  margin: auto;
+}

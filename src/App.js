@@ -1,8 +1,9 @@
 import React from "react";
-import Login from "./components/login/Login";
-import Register from "./components/login/Register";
-import EditUser from "./components/login/EditUser";
-import BackLogin from "./components/login/backgroun.jpg";
+// import Login from "./components/login/Login";
+import LoginForm from "./components/loginForm";
+// import Register from "./components/login/Register";
+import RegisterForm from "./components/registerForm";
+import UserForm from "./components/users/userForm";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./components/Fontawesomeicon/Index";
 import "./App.css";
@@ -13,10 +14,10 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route exact path="/editusers" component={EditUser}></Route>
+          <Route exact path="/editusers" component={UserForm}></Route>
           <div className="login">
-            <Route exact path="/login" component={Login}></Route>
-            <Route exact path="/register" component={Register}></Route>
+            <Route exact path="/login" component={LoginForm}></Route>
+            <Route exact path="/register" component={RegisterForm}></Route>
             <Route exact path="/issues" component={Issues}></Route>
           </div>
         </Switch>

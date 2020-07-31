@@ -83,7 +83,6 @@ nav {
 }
 
 label #sidebar-btn {
-  z-index: 1;
   color: orangered;
   position: fixed;
   cursor: pointer;

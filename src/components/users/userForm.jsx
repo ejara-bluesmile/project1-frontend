@@ -14,12 +14,12 @@ class UserForm extends Form {
   };
 
   schema = {
-    id: Joi.string(),
+    id: Joi.number(),
     email: Joi.string().required().email().label("Email"),
     password: Joi.string().required().min(1).label("Password"),
     name: Joi.string().required().label("Name"),
     lastname: Joi.string().required().label("Lastname"),
-    createdAt: Joi.string(),
+    createdAt: "",
   };
 
   async populateUser() {

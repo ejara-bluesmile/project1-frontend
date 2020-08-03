@@ -37,6 +37,39 @@ function Sidebar() {
         </div>
       </div>
     </div>
+    // <div className="wraper">
+    //   <input type="checkbox" id="check" />
+    //   <label htmlFor="check">
+    //     <i class="fa fa-bars" id="btn" />
+    //     <i class="fa fa-times" id="cancel" />
+    //   </label>
+    //   <div className="sidebar">
+    //     <header>
+    //       <div className="iconcompany">
+    //         <img src={iconCompany} alt="iconcompany" />
+    //       </div>
+    //     </header>
+    //     <center>
+    //       <div className="iconcompany">
+    //         <img src={ImgIcon} className="profile_image" alt="user" />
+    //       </div>
+    //       <h4>Name.user</h4>
+    //       <h4>Email.user</h4>
+    //     </center>
+    //     <ul>
+    //       <li>
+    //         <a href="">
+    //           <i className="fa fa-qrcode"></i>Users
+    //         </a>
+    //       </li>
+    //       <li>
+    //         <a href="">
+    //           <i className="fa fa-link"></i>Issues
+    //         </a>
+    //       </li>
+    //     </ul>
+    //   </div>
+    // </div>
   );
 }
 export default Sidebar;

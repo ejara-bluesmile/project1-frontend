@@ -8,6 +8,7 @@ import { paginate } from "../utils/paginate";
 import _ from "lodash";
 import SearchBox from "../searchBox";
 import Sidebar from "../sideBar";
+import "../common/common.css";
 
 class Users extends Component {
   state = {
@@ -94,35 +95,37 @@ class Users extends Component {
           <div className="col-2">
             <Sidebar />
           </div>
-          <div className="col-10 content-table">
-            <p>Showing {totalCount} users in the database.</p>
-            <SearchBox value={searchQuery} onChange={this.handleSearch} />
-            <UsersTable
-              users={users}
-              sortColumn={sortColumn}
-              onLike={this.handleLike}
-              onDelete={this.handleDelete}
-              onSort={this.handleSort}
-            />
-            <Pagination
-              itemsCount={totalCount}
-              pageSize={pageSize}
-              currentPage={currentPage}
-              onPageChange={this.handlePageChange}
-              className="pagination"
-            />
+          <section>
+            <div className="col-12 content-table">
+              <p>Showing {totalCount} users in the database.</p>
+              <SearchBox value={searchQuery} onChange={this.handleSearch} />
+              <UsersTable
+                users={users}
+                sortColumn={sortColumn}
+                onLike={this.handleLike}
+                onDelete={this.handleDelete}
+                onSort={this.handleSort}
+              />
+              <Pagination
+                itemsCount={totalCount}
+                pageSize={pageSize}
+                currentPage={currentPage}
+                onPageChange={this.handlePageChange}
+                className="pagination"
+              />
 
-            {/* {user && ( */}
-            <Link
-              to="/users/new"
-              className="btn btn-primary"
-              id="btn-newuser"
-              // style={{ marginBottom: 20 }}
-            >
-              New User
-            </Link>
-            {/* )} */}
-          </div>
+              {/* {user && ( */}
+              <Link
+                to="/users/new"
+                className="btn btn-primary"
+                id="btn-newuser"
+                // style={{ marginBottom: 20 }}
+              >
+                New User
+              </Link>
+              {/* )} */}
+            </div>
+          </section>
         </div>
       </div>
     );

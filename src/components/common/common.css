@@ -1,5 +1,5 @@
 /* NAVBAR */
-nav {
+/* nav {
   background: #434e5a;
   border-style: hidden;
   z-index: 1;
@@ -10,7 +10,7 @@ nav h3 {
   font-weight: 900;
   letter-spacing: 4px;
   margin-left: 15px;
-}
+} */
 
 /* SIDEBAR */
 
@@ -25,7 +25,7 @@ nav h3 {
   padding-top: 150px;
   width: 240px;
   height: 100%;
-  background: #434e5a;
+  background: #204051;
   left: 0;
   top: 0;
   bottom: 0;
@@ -70,7 +70,7 @@ nav h3 {
 }
 
 label #sidebar-btn {
-  color: orangered;
+  color: #3b6978;
   position: fixed;
   cursor: pointer;
   top: 20px;
@@ -81,16 +81,12 @@ label #sidebar-btn {
   transition-property: color;
 }
 label #sidebar-btn:hover {
-  color: rgb(116, 116, 122);
+  color: red;
 }
 
 #check:checked ~ .sidebar {
   left: -250px;
-  transition: 0.5s;
-}
-#check:checked ~ #sidebar-btn {
-  right: -220px;
-  transition: 0.5s;
+  transition: 0.9s;
 }
 
 #check {
@@ -106,7 +102,7 @@ label #sidebar-btn:hover {
 }
 
 .modal-content {
-  background-color: #434e5a;
+  background-color: #3b6978;
   opacity: 0.8;
   padding: 0 20px;
   border-radius: 10px;
@@ -142,11 +138,10 @@ label #sidebar-btn:hover {
   padding: 10px;
 }
 
-.btn-danger {
+.btn-login {
   font-size: 19px;
   border-radius: 5px;
   padding: 7px 14px;
-  border: 1px solid seagreen;
 }
 
 .forgot {
@@ -193,4 +188,28 @@ label #sidebar-btn:hover {
 .icon-img {
   margin-top: -50px;
   margin-bottom: 45px;
+}
+
+/* user table */
+.pagination {
+  justify-content: center;
+}
+
+.btn-delete {
+  letter-spacing: 3px;
+}
+.btn-edit {
+  letter-spacing: 3px;
+}
+
+.content-table {
+  background-color: #e4e3e3;
+  margin-top: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid #84a9ac;
+}
+
+td {
+  letter-spacing: 2px;
 }

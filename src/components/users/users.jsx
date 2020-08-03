@@ -94,7 +94,7 @@ class Users extends Component {
           <div className="col-2">
             <Sidebar />
           </div>
-          <div className="col-10">
+          <div className="col-10 content-table">
             <p>Showing {totalCount} users in the database.</p>
             <SearchBox value={searchQuery} onChange={this.handleSearch} />
             <UsersTable
@@ -109,12 +109,13 @@ class Users extends Component {
               pageSize={pageSize}
               currentPage={currentPage}
               onPageChange={this.handlePageChange}
+              className="pagination"
             />
 
             {/* {user && ( */}
             <Link
               to="/users/new"
-              className="btn btn-info"
+              className="btn btn-primary"
               id="btn-newuser"
               // style={{ marginBottom: 20 }}
             >

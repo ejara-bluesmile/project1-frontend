@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import auth from "../services/authService";
 import { Link } from "react-router-dom";
 import Table from "../common/table";
+import "../common/common.css";
 
 class UsersTable extends Component {
   columns = [
@@ -16,7 +17,7 @@ class UsersTable extends Component {
       content: (user) => (
         <button
           onClick={() => this.props.onDelete(user)}
-          className="btn btn-danger btn-sm"
+          className="btn btn-danger btn-sm btn-delete"
         >
           Delete
         </button>
@@ -26,7 +27,7 @@ class UsersTable extends Component {
       key: "edit",
       content: (user) => (
         <Link to={`/users/${user.id}`}>
-          <button className="btn btn-primary btn-sm">Edit</button>
+          <button className="btn btn-info btn-sm btn-edit">Edit</button>
         </Link>
       ),
     },

@@ -8,7 +8,7 @@ const TextArea = ({ name, label, error }) => {
                 className="form-control"
                 id={name}
                 rows="3"
-                placeholder={name}>  
+                placeholder={name}>
             </textarea>
             {error && <div className="alert alert-danger">{error}</div>}
         </div>

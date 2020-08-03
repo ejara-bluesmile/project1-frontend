@@ -10,14 +10,13 @@ class UsersTable extends Component {
       label: "User",
       content: (user) => <Link to={`/users/${user.id}`}>{user.email}</Link>,
     },
-    { path: "name", label: "Name" },
-    // { path: "lastname", label: "Lastname" },
+    { path: "name", label: "name" },
     {
       key: "delete",
       content: (user) => (
         <button
           onClick={() => this.props.onDelete(user)}
-          className="btn btn-primary btn-sm"
+          className="btn btn-danger btn-sm"
         >
           Delete
         </button>
@@ -26,12 +25,9 @@ class UsersTable extends Component {
     {
       key: "edit",
       content: (user) => (
-        <button
-          onClick={() => this.props.onEdit(user)}
-          className="btn btn-info btn-sm"
-        >
-          Edit
-        </button>
+        <Link to={`/users/${user.id}`}>
+          <button className="btn btn-primary btn-sm">Edit</button>
+        </Link>
       ),
     },
   ];

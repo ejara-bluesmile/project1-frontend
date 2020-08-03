@@ -8,7 +8,6 @@ import { paginate } from "../utils/paginate";
 import _ from "lodash";
 import SearchBox from "../searchBox";
 import Sidebar from "../sideBar";
-import NavBar from "../navBar";
 
 class Users extends Component {
   state = {
@@ -16,7 +15,7 @@ class Users extends Component {
     currentPage: 1,
     pageSize: 4,
     searchQuery: "",
-    sortColumn: { path: "title", order: "asc" },
+    sortColumn: { path: "email", order: "asc" },
   };
 
   async componentDidMount() {
@@ -26,11 +25,11 @@ class Users extends Component {
 
   handleDelete = async (user) => {
     const originalUsers = this.state.users;
-    const users = originalUsers.filter((u) => u._id !== user._id);
+    const users = originalUsers.filter((u) => u.id !== user.id);
     this.setState({ users });
 
     try {
-      await deleteUser(user._id);
+      await deleteUser(user.id);
     } catch (ex) {
       if (ex.response && ex.response.status === 404)
         toast.error("The user was deleted.");
@@ -90,20 +89,12 @@ class Users extends Component {
     const { totalCount, data: users } = this.getPagedData();
 
     return (
-      <div>
-        <Sidebar />
-        {/* <NavBar /> */}
+      <div className="container">
         <div className="row">
-          <div className="col">
-            {user && (
-              <Link
-                to="/user/new"
-                className="btn btn-primary"
-                style={{ marginBottom: 20 }}
-              >
-                New User
-              </Link>
-            )}
+          <div className="col-2">
+            <Sidebar />
+          </div>
+          <div className="col-10">
             <p>Showing {totalCount} users in the database.</p>
             <SearchBox value={searchQuery} onChange={this.handleSearch} />
             <UsersTable
@@ -119,6 +110,17 @@ class Users extends Component {
               currentPage={currentPage}
               onPageChange={this.handlePageChange}
             />
+
+            {/* {user && ( */}
+            <Link
+              to="/users/new"
+              className="btn btn-info"
+              id="btn-newuser"
+              // style={{ marginBottom: 20 }}
+            >
+              New User
+            </Link>
+            {/* )} */}
           </div>
         </div>
       </div>

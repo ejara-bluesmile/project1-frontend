@@ -17,6 +17,7 @@ nav h3 {
 .wrapper {
   display: flex;
   position: relative;
+  z-index: 1;
 }
 
 .wrapper .sidebar {
@@ -29,11 +30,12 @@ nav h3 {
   top: 0;
   bottom: 0;
 }
-.wrapper .sidebar h3 {
-  font-size: 30px;
-  color: blue;
+.iconcompany {
   margin-top: -140px;
   text-align: center;
+}
+.iconcompany img {
+  width: 150px;
 }
 
 .wrapper .sidebar center {
@@ -99,7 +101,7 @@ label #sidebar-btn:hover {
 
 .main-section {
   margin: 0 auto;
-  margin-top: 130px;
+  margin-top: 100px;
   padding: 0;
 }
 
@@ -174,9 +176,21 @@ label #sidebar-btn:hover {
 .modal-content-userform input {
   margin: auto;
 }
-
-.lagout {
+/* logout */
+.logout {
   margin-top: 100px;
   margin-left: 140px;
   letter-spacing: 2px;
+}
+
+/* UserForm */
+
+.icon-img img {
+  height: 100px;
+  width: 100px;
+}
+
+.icon-img {
+  margin-top: -50px;
+  margin-bottom: 45px;
 }

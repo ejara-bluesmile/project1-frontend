@@ -19,7 +19,7 @@ function App() {
         <div className="App">
           <Switch>
             <Route exact path="/users" component={Users}></Route>
-            <Route exact path="/editusers" component={UserForm}></Route>
+            <Route path="/users/:id" component={UserForm} />
             <div className="login">
               <Route exact path="/login" component={LoginForm}></Route>
               <Route exact path="/register" component={RegisterForm}></Route>

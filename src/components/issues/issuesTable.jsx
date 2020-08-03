@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import auth from "../services/authService";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Table from "../common/table";
 //import Like from "./common/like";
 
@@ -16,22 +16,22 @@ class IssuesTable extends Component {
         { path: "status", label: "Status" },
         {
             key: "edit",
-            content: movie => (
-                <button
-                    onClick={() => this.props.onDelete(movie)}
-                    className="btn btn-danger btn-sm"
-                >
-                    <i class="fa fa-pencil-square-o"
-                        aria-hidden="true">
-                    </i>
-                </button>
+            content: issue => (
+                <Link to={`/issuesForm/${issue._id}`}>
+                    <button
+                        className="btn btn-primary btn-sm">
+                        <i class="fa fa-pencil-square-o"
+                            aria-hidden="true">
+                        </i>
+                    </button>
+                </Link>
             )
         },
         {
             key: "delete",
-            content: movie => (
+            content: issue => (
                 <button
-                    onClick={() => this.props.onDelete(movie)}
+                    onClick={() => this.props.onDelete(issue)}
                     className="btn btn-danger btn-sm"
                 >
                     <i class="fa fa-trash"
@@ -42,17 +42,6 @@ class IssuesTable extends Component {
         }
 
     ];
-    deleteColumn = {
-        key: "delete",
-        content: movie => (
-            <button
-                onClick={() => this.props.onDelete(movie)}
-                className="btn btn-danger btn-sm"
-            >
-                Delete
-            </button>
-        )
-    };
     // constructor() {
     //     //     super();
     //     //     const user = auth.getCurrentUser();
@@ -60,7 +49,7 @@ class IssuesTable extends Component {
     // }
     render() {
         const { issues, onSort, sortColumn } = this.props;
-        
+
         return (
             <Table
                 columns={this.columns}

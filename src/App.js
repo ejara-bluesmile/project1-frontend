@@ -10,6 +10,7 @@ import "./components/Fontawesomeicon/Fontawesome";
 import Issues from "./components/issues/issues";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
+import IssuesForm from "./components/issues/issuesForm";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route exact path="/login" component={LoginForm}></Route>
               <Route exact path="/register" component={RegisterForm}></Route>
               <Route exact path="/issues" component={Issues}></Route>
+              <Route exact path="/issuesForm/:id" component={IssuesForm}></Route>
             </div>
           </Switch>
         </div>

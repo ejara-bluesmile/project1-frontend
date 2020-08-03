@@ -11,7 +11,6 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "express": "^4.17.1",
     "axios": "^0.19.2",
     "font-awesome": "^4.7.0",
     "joi-browser": "^13.4.0",
@@ -25,7 +24,7 @@
     "toastify": "^2.0.1"
   },
   "scripts": {
-    "start": "node server",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

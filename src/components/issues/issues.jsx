@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import { getSongs } from '../services/songService';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import IssuesTable from "./issuesTable";
 import Sidebar from "../sideBar";
 import Pagination from "../common/pagination";
@@ -94,23 +94,34 @@ class Issues extends Component {
         const { totalCount, data: issues } = this.getPagedData();
 
         return (
-            <div className="row">
-                <div className="col-12 modal-dialog text-center">
-                    <h1>Issues actions</h1>
-                    <SearchBox value={searchQuery} onChange={this.handleSearch} />
-
-                    <IssuesTable
-                        issues={issues}
-                        sortColumn={sortColumn}
-                        onDelete={this.handleDelete}
-                        onSort={this.handleSort}
-                    />
-                    <Pagination
-                        itemsCount={totalCount}
-                        pageSize={pageSize}
-                        currentPage={currentPage}
-                        onPageChange={this.handlePageChange}
-                    />
+            <div className="container">
+                <div className="row">
+                    <div className="col-2">
+                        <Sidebar />
+                    </div>
+                    <div className="col-10">
+                        <h1>Issues actions</h1>
+                        <SearchBox value={searchQuery} onChange={this.handleSearch} />
+                        <Link
+                            to="/issuesForm/new"
+                            className="btn btn-info"
+                            id="btn-newuser"
+                        >
+                            New issue
+                        </Link>
+                        <IssuesTable
+                            issues={issues}
+                            sortColumn={sortColumn}
+                            onDelete={this.handleDelete}
+                            onSort={this.handleSort}
+                        />
+                        <Pagination
+                            itemsCount={totalCount}
+                            pageSize={pageSize}
+                            currentPage={currentPage}
+                            onPageChange={this.handlePageChange}
+                        />
+                    </div>
                 </div>
             </div>
         );

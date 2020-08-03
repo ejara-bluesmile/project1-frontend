@@ -16,8 +16,8 @@ class IssuesTable extends Component {
         { path: "status", label: "Status" },
         {
             key: "edit",
-            content: movie => (
-                <Link to={`/login/${movie._id}`}>'
+            content: issue => (
+                <Link to={`/issuesForm/${issue._id}`}>
                     <button
                         className="btn btn-primary btn-sm">
                         <i class="fa fa-pencil-square-o"
@@ -29,9 +29,9 @@ class IssuesTable extends Component {
         },
         {
             key: "delete",
-            content: movie => (
+            content: issue => (
                 <button
-                    onClick={() => this.props.onDelete(movie)}
+                    onClick={() => this.props.onDelete(issue)}
                     className="btn btn-danger btn-sm"
                 >
                     <i class="fa fa-trash"

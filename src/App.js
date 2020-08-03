@@ -25,7 +25,7 @@ function App() {
               <Route exact path="/login" component={LoginForm}></Route>
               <Route exact path="/register" component={RegisterForm}></Route>
               <Route exact path="/issues" component={Issues}></Route>
-              <Route exact path="/issuesForm" component={IssuesForm}></Route>
+              <Route exact path="/issuesForm/:id" component={IssuesForm}></Route>
             </div>
           </Switch>
         </div>

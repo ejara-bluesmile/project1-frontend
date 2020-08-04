@@ -5,7 +5,10 @@ import { getUser, saveUser } from "../../services/usersService";
 // import NavBar from "../navBar";
 import SideBar from "../sideBar";
 import "../common/common.css";
+import { Link } from "react-router-dom";
 import IconEdit from "../../resource/edit.png";
+import iconCompany from "../../resource/bluesmile.png";
+import ImgIcon from "../../resource/user.png";
 
 class UserForm extends Form {
   state = {
@@ -57,25 +60,63 @@ class UserForm extends Form {
 
   render() {
     return (
-      <div className="row">
-        <div className="col-2">
-          <SideBar />
-        </div>
-        <div className="container col-10 userform">
-          <div className="modal-dialog text-center">
-            <div className="col-sm-10 main-section">
-              <div className="modal-content">
-                <div className="col-12 icon-img">
-                  <img src={IconEdit} alt="iconedit" />
+      <div className="">
+        <div className="">
+          {/* <SideBar /> */}
+          <div className="wraper">
+            <input type="checkbox" id="check" />
+            <label htmlFor="check">
+              <i class="fa fa-bars" id="btn" />
+              <i class="fa fa-times" id="cancel" />
+            </label>
+            <div className="sidebar">
+              <header>
+                <div className="iconcompany">
+                  <img src={iconCompany} alt="iconcompany" />
                 </div>
-                <div className="col-12 form-input">
-                  <form onSubmit={this.handleSubmit}>
-                    {this.renderInput("name", "Name")}
-                    {this.renderInput("lastname", "Lastname")}
-                    {this.renderInput("email", "Email")}
-                    {this.renderInput("password", "Password", "password")}
-                    {this.renderButton("Save")}
-                  </form>
+              </header>
+              <center>
+                <div className="iconuser">
+                  <img src={ImgIcon} className="profile_image" alt="user" />
+                </div>
+                <h4>Name.user</h4>
+                <h4>Email.user</h4>
+              </center>
+              <ul>
+                <li>
+                  <Link to="/users">
+                    <span>User Actions</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/issues">
+                    <span>Issues Actions </span>
+                  </Link>
+                </li>
+              </ul>
+              <div className="logout btn btn-outline-warning">
+                Logout{/* <Logout /> */}
+              </div>
+            </div>
+            <div className="container">
+              <div className="">
+                <div className="modal-dialog text-center">
+                  <div className="main-section">
+                    <div className="modal-content">
+                      <div className="icon-img">
+                        <img src={IconEdit} alt="iconedit" />
+                      </div>
+                      <div className="form-input">
+                        <form onSubmit={this.handleSubmit}>
+                          {this.renderInput("name", "Name")}
+                          {this.renderInput("lastname", "Lastname")}
+                          {this.renderInput("email", "Email")}
+                          {this.renderInput("password", "Password", "password")}
+                          {this.renderButton("Save")}
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

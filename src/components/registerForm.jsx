@@ -2,7 +2,6 @@ import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
 import * as userService from "../services/userService";
-
 import "./common/common.css";
 import IconRegister from "../resource/register-icon.png";
 

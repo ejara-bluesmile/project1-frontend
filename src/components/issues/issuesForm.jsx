@@ -37,19 +37,19 @@ class IssuesForm extends Form {
                 this.props.history.replace("/not-found");
         }
     }
-    // mapToViewModel(todo) {
-    //     return {
-    //         _id: todo._id,
-    //         title: todo.title,
-    //         userId: todo.user._id,
-    //         completed: todo.completed
-    //     };
-    // }
-    // doSubmit = async () => {
-    //     console.log(this.state.data)
-    //     await saveTodo(this.state.data);
-    //     this.props.history.push("/");
-    // }
+    mapToViewModel(issue) {
+        return {
+        title: issue.title,
+        description: issue.description,
+        user: issue.user,
+        status: issue.status
+        };
+    }
+    doSubmit = async () => {
+        console.log(this.state.data)
+        // await saveTodo(this.state.data);
+        this.props.history.push("/");
+    }
     render() {
         return (
             <div className="row">

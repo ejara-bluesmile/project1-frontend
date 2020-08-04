@@ -9,6 +9,8 @@ import _ from "lodash";
 import SearchBox from "../searchBox";
 import Sidebar from "../sideBar";
 import "../common/common.css";
+import iconCompany from "../../resource/bluesmile.png";
+import ImgIcon from "../../resource/user.png";
 
 class Users extends Component {
   state = {
@@ -82,7 +84,6 @@ class Users extends Component {
       return (
         <div>
           <Sidebar />
-          {/* <NavBar /> */}
           <p>There are no movies in the database.</p>
         </div>
       );
@@ -90,42 +91,78 @@ class Users extends Component {
     const { totalCount, data: users } = this.getPagedData();
 
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-2">
-            <Sidebar />
-          </div>
-          <section>
-            <div className="col-12 content-table">
-              <p>Showing {totalCount} users in the database.</p>
-              <SearchBox value={searchQuery} onChange={this.handleSearch} />
-              <UsersTable
-                users={users}
-                sortColumn={sortColumn}
-                onLike={this.handleLike}
-                onDelete={this.handleDelete}
-                onSort={this.handleSort}
-              />
-              <Pagination
-                itemsCount={totalCount}
-                pageSize={pageSize}
-                currentPage={currentPage}
-                onPageChange={this.handlePageChange}
-                className="pagination"
-              />
-
-              {/* {user && ( */}
-              <Link
-                to="/users/new"
-                className="btn btn-primary"
-                id="btn-newuser"
-                // style={{ marginBottom: 20 }}
-              >
-                New User
-              </Link>
-              {/* )} */}
+      <div className="">
+        <div className="">
+          {/* <Sidebar /> */}
+          <div className="wraper">
+            <input type="checkbox" id="check" />
+            <label htmlFor="check">
+              <i class="fa fa-bars" id="btn" />
+              <i class="fa fa-times" id="cancel" />
+            </label>
+            <div className="sidebar">
+              <header>
+                <div className="iconcompany">
+                  <img src={iconCompany} alt="iconcompany" />
+                </div>
+              </header>
+              <center>
+                <div className="iconuser">
+                  <img src={ImgIcon} className="profile_image" alt="user" />
+                </div>
+                <h4>Name.user</h4>
+                <h4>Email.user</h4>
+              </center>
+              <ul>
+                <li>
+                  <Link to="/users">
+                    <span>User Actions</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/issues">
+                    <span>Issues Actions </span>
+                  </Link>
+                </li>
+              </ul>
+              <div className="logout btn btn-outline-warning">
+                Logout{/* <Logout /> */}
+              </div>
             </div>
-          </section>
+            <div className="container">
+              <div className="">
+                <div className="content-table">
+                  <p>Showing {totalCount} users in the database.</p>
+                  <SearchBox value={searchQuery} onChange={this.handleSearch} />
+                  <UsersTable
+                    users={users}
+                    sortColumn={sortColumn}
+                    onLike={this.handleLike}
+                    onDelete={this.handleDelete}
+                    onSort={this.handleSort}
+                  />
+                  <Pagination
+                    itemsCount={totalCount}
+                    pageSize={pageSize}
+                    currentPage={currentPage}
+                    onPageChange={this.handlePageChange}
+                    className="pagination"
+                  />
+
+                  {/* {user && ( */}
+                  <Link
+                    to="/users/new"
+                    className="btn btn-primary"
+                    id="btn-newuser"
+                    // style={{ marginBottom: 20 }}
+                  >
+                    New User
+                  </Link>
+                  {/* )} */}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

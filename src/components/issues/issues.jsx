@@ -11,8 +11,9 @@ import _ from "lodash";
 // import SearchBox from "./searchBox";
 
 class Issues extends Component {
+    
     state = {
-        songs: [{
+        issues: [{
             title: "titulo",
             description: "descripción",
             user: "usuario",
@@ -32,17 +33,11 @@ class Issues extends Component {
     handleSearch = query => {
         this.setState({ searchQuery: query });
     };
-    handleDelete = (song) => {
-        const songs = this.state.songs.filter(s => s._id !== song._id);
-        this.setState({ songs });
+    handleDelete = (issue) => {
+        const issues = this.state.issues.filter(s => s._id !== issue._id);
+        this.setState({ issues });
     }
-    handleLike = song => {
-        const songs = [...this.state.songs];
-        const index = songs.indexOf(song);
-        songs[index] = { ...songs[index] }
-        songs[index].liked = !songs[index].liked;
-        this.setState({ songs });
-    }
+
     handlePageChange = (page) => {
         this.setState({ currentPage: page });
     };
@@ -61,7 +56,7 @@ class Issues extends Component {
             currentPage,
             sortColumn,
             searchQuery,
-            songs: allIssues,
+            issues: allIssues,
         } = this.state;
 
         let filtered = allIssues;
@@ -78,9 +73,9 @@ class Issues extends Component {
     };
 
     render() {
-        const { length: count } = this.state.songs;
+        const { length: count } = this.state.issues;
         const { pageSize, currentPage, sortColumn, searchQuery } = this.state;
-        const { song } = this.props;
+        const { issue } = this.props;
 
         if (count === 0)
             return (
@@ -105,7 +100,7 @@ class Issues extends Component {
                         <Link
                             to="/issuesForm/new"
                             className="btn btn-info"
-                            id="btn-newuser"
+                            style= {{ marginBottom: 20, marginTop: 20}}
                         >
                             New issue
                         </Link>

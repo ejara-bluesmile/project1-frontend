@@ -1,6 +1,5 @@
 import React from "react";
 import "./common/common.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ImgIcon from "../resource/user.png";
 import { Link } from "react-router-dom";
 import Logout from "./logout";

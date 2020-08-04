@@ -7,7 +7,6 @@ import SideBar from "../sideBar";
 import "../common/common.css";
 import { Link } from "react-router-dom";
 import IconEdit from "../../resource/edit.png";
-
 import iconCompany from "../../resource/bluesmile.png";
 import ImgIcon from "../../resource/user.png";
 

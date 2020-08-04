@@ -250,11 +250,13 @@ label #sidebar-btn:hover {
   padding: 10px;
 }
 
+
 .btn-login {
   font-size: 19px;
   border-radius: 5px;
   padding: 7px 14px;
 }
+
 
 .forgot {
   padding: 5px 0 25px;
